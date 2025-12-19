@@ -1,146 +1,97 @@
-<div align="center">
+<!--
+   Frontend Roadmap & Interview Preparation
+   Clean Landing Page Style (HTML-flavored Markdown)
+-->
 
-<!-- BADGES -->
-<p>
-  <img src="https://img.shields.io/badge/Frontend-Roadmap-blueviolet?style=for-the-badge&logo=javascript" />
-  <img src="https://img.shields.io/badge/Interview%20Prep-Active-brightgreen?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Progress-Consistent-yellow?style=for-the-badge&logo=progress" />
-  <img src="https://img.shields.io/badge/%E2%9C%85-Open-Important-red?style=for-the-badge" />
+<h1 align="center">🚀 Frontend Roadmap & Interview Preparation</h1>
+
+<p align="center">
+  <strong>Level Up Your Frontend Skills & Ace Interviews</strong><br/>
+  <em>Structured, Senior-Centric Study Guide | Scalable & Modular | Continuous Progress Tracking</em>
 </p>
 
-# 🚀 Frontend Roadmap Revision / خارطة طريق واجهة المستخدم
+<br/>
 
-**Welcome! أهلاً بك في رحلة تطوير مهاراتك كمطور واجهات أمامية.**
+<div align="center">
+  <img src="https://img.shields.io/badge/status-in%20progress-blue?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License" />
+</div>
 
-🌟 <b>This repository is your senior-level guide for modern frontend learning, interview mastery, real-world projects & consistent growth. / هذا المستودع هو دليلك المهني لتعلم أحدث تقنيات الواجهة وتحضير مقابلات العمل، والمشاريع الواقعية والنمو المستمر.</b>
+<br/>
 
 ---
 
+## 🌟 Hero Section
+
 <table>
-<tr><td align="center">
-
-### <b>Summary Table / جدول المسارات</b>
-
-| Track                 | Status                                     | تقدم    |
-|-----------------------|--------------------------------------------|---------|
-| JavaScript Core       | <img src="https://img.shields.io/badge/80%25-in%20progress-yellow" />           | <progress value="80" max="100"></progress> |
-| Frameworks (React)    | <img src="https://img.shields.io/badge/60%25-learning-blue" />                   | <progress value="60" max="100"></progress> |
-| TypeScript            | <img src="https://img.shields.io/badge/30%25-begins-ff69b4" />                  | <progress value="30" max="100"></progress> |
-| CSS & Design Systems  | <img src="https://img.shields.io/badge/50%25-solid-yellowgreen" />              | <progress value="50" max="100"></progress> |
-| Testing               | <img src="https://img.shields.io/badge/10%25-upcoming-9cf" />                   | <progress value="10" max="100"></progress> |
-| System Design         | <img src="https://img.shields.io/badge/5%25-plan-grey" />                       | <progress value="5" max="100"></progress>  |
-
-</td></tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/color/96/000000/computer--v2.png" width="50" align="left" />
+      <h2>What is this?</h2>
+      <p>
+        A curated, high-level roadmap for frontend engineers, emphasizing <strong>fundamentals, frameworks, best practices, and interview excellence</strong>.
+        <br/><br/>
+        🧭 <b>Structured paths</b> for every major technology.<br/>
+        💡 <b>Tricks, notes, and interview essentials</b> under each topic.<br/>
+        📈 <b>Progress tracker</b> to monitor your journey as you master the frontend landscape.<br/>
+      </p>
+    </td>
+  </tr>
 </table>
 
 ---
 
-# 🦸 Hero Section / القسم الرئيسي
+## 🗺️ Roadmap Table
 
-> "Frontend is a journey — consistency builds greatness."
->
-> **الواجهة رحلة تطوير وبناء مستمر وتركيزك اليوم هو استثمار في نجاحك غداً.**
-
-Start here to build projects, prep interviews and grow 🚀.
-
----
-
-# 📚 How I Use This Repo / كيف أستخدم هذا المستودع
-
-- Track daily/weekly progress via checklists. ✅
-- Add interview notes and learnings directly in relevant sections. 💡
-- Use code/links/examples as a quick mental refresh before interviews or challenges. ⚡
-- Contribute by refining topics as you grow your experience. 🌱
-- استفد من هيكلة المستودع لمواصلة التعلم واسترجاع المعلومات بسرعة قبل أي مقابلة أو اختبار.
+| Area             | Folder                        | Status    | Key Topics                 | Interview Focus 🌟 |
+|------------------|------------------------------|-----------|----------------------------|-------------------|
+| HTML             | [`/html/`](html/)            | 🔄 WIP     | Semantics, Accessibility   | Yes               |
+| CSS              | [`/css/`](css/)              | 🔄 WIP     | Selectors, Flex, Grid      | Yes               |
+| SCSS             | [`/scss/`](scss/)            | 🔄 WIP     | Nesting, Mixins, Extends   |                   |
+| Bootstrap        | [`/bootstrap/`](bootstrap/)  | 🔄 WIP     | Grid, Components           |                   |
+| Tailwind         | [`/tailwind/`](tailwind/)    | 🔄 WIP     | Utility-First CSS          |                   |
+| JavaScript       | [`/javascript/`](javascript/)| 🔄 WIP     | ES6+, Async, DOM           | Yes               |
+| TypeScript       | [`/typescript/`](typescript/)| 🔄 WIP     | Types, Generics, Utility   | Yes               |
+| React            | [`/react/`](react/)          | 🔄 WIP     | Hooks, State, Patterns     | Yes               |
+| Next.js          | [`/nextjs/`](nextjs/)        | 🔄 WIP     | SSR, API, Routing          | Yes               |
 
 ---
 
-# 🗺️ Roadmap Table / خارطة الطريق
+## 🎯 Interview Focus
 
-| Step    | Topic                   | Resource/Status          | ملاحظات           |
-|---------|-------------------------|--------------------------|-------------------|
-| 1       | JS Fundamentals         | [MDN JS Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) <br> <img src="https://img.shields.io/badge/DONE-success" /> | أساس ضروري     |
-| 2       | Modern React            | [React Docs](https://react.dev/) <br> <img src="https://img.shields.io/badge/ONGOING-yellow" /> | تحديث مستمر   |
-| 3       | State Management        | [Redux](https://redux.js.org/) <br> <img src="https://img.shields.io/badge/NEXT-blue" /> | قريباً        |
-| 4       | Testing & Debugging     | [Testing Library](https://testing-library.com/) <br> <img src="https://img.shields.io/badge/NEXT-blue" /> | مهم للمقابلات |
-| 5       | System Design           | [System Design Primer](https://github.com/donnemartin/system-design-primer) <br> <img src="https://img.shields.io/badge/PLAN-grey" /> | متقدم        |
+- Each stack section contains a dedicated <code>interview-questions.md</code> for targeted prep.
+- Stay ahead with <b>real-world questions, scenario-based problem-solving, and code snippets</b>.
+- <em>Tricks & notes highlight hidden concepts and best practices used in top companies.</em>
 
 ---
 
-# 🏆 Interview Prep Focus / التركيز على المقابلات
+## 📊 Progress Tracker
 
-- Focus on patterns, not just syntax (observer, pub-sub, immutability, hooks, etc.).
-- Revise data structure visualizations and explanation skills.
-- Summarize Q&A from mock/real interviews here, in context.
-- ✨ Enhance answers with real code and diagrams.
-- خصص قسمًا لكل أسئلة مقابلات، سجل ملخصك وتجاربك العملية مع كل موضوع.
+| Area             | Fundamentals 🟩 | Interview 🟦 | Tricks/Notes 🟨 | Progress |
+|------------------|:--------------:|:------------:|:--------------:|:--------:|
+| HTML             | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| CSS              | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| SCSS             | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| Bootstrap        | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| Tailwind         | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| JavaScript       | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| TypeScript       | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| React            | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| Next.js          | ⬜️             | ⬜️           | ⬜️             | 0%       |
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Interview%20Experience-Improves%20Content-informational" />
-  <br>
-  <b>❗ I actively refine content here based on each interview and review feedback. / أطور المحتوى باستمرار بناءً على الخبرة من مقابلات العمل والمناقشات التقنية.</b>
-</div>
-
----
-
-# 📈 Progress Tracker / متابعة التقدم
-
-| Milestone                | Status  | Target Date     |
-|--------------------------|---------|-----------------|
-| Core Track Complete      | 80%     | 2026-01-30      |
-| Advanced Frameworks      | 60%     | 2026-03-01      |
-| Interview Readiness      | 40%     | 2026-05-01      |
-
-<progress value="80" max="100"></progress> JS Core
-<progress value="60" max="100"></progress> Frameworks
-<progress value="40" max="100"></progress> Interviews
+_Update each section as you advance for visual tracking!_
 
 ---
 
-# 🔗 Useful Links / روابط سريعة
+## 📚 Getting Started
 
-- 🛠️ [Frontend Roadmap](https://roadmap.sh/frontend)
-- 📖 [JavaScript Info](https://javascript.info/)
-- 📰 [Daily.dev](https://daily.dev/)
-- 💡 [Interview Questions](https://frontendinterviewhandbook.com/)
-- 🌍 [CSS Tricks](https://css-tricks.com/)
-- 🏗️ [System Design Primer](https://github.com/donnemartin/system-design-primer)
-- 🏅 [LeetCode](https://leetcode.com/)
+1. Browse the folder structure for each technology.
+2. Work through the `basics.md`, then explore `interview-questions.md` and `tricks-and-notes.md` files.
+3. Track your progress using the tables above.
+4. PRs welcome for additional resources, questions, and best practices!
 
 ---
 
-# 🧭 Philosophy / الفلسفة
-
-- Build daily, revise weekly, reflect after every real challenge/interview.
-- Depth beats breadth in the long run.
-- التكرار والإستمرارية أهم من الكمال.
-- سجل كل تقدم أو تعلّم جديد. التغيير البسيط يوميًا يصنع فرقًا كبيرًا.
-
----
-
-# 📝 Notes & FAQ / ملاحظات وأسئلة شائعة
-
-- **Q: Can I use this repo for interviews?**<br>
-  **A: Yes! Designed for practical interview prep.**
-
-- **Q: Will content be updated?**<br>
-  **A: Absolutely. Every interview leads to more refinements!**
-
-- **س: كيف أستفيد بأقصى شكل؟**<br>
-  **ج: راجع كل قسم بعد أي مقابلة أو مشروع عملي، وسجل ملاحظاتك بوضوح.**
-
----
-
-<div align="center" style="background:#fffbe6; border:2px solid #f5c518; border-radius:8px; padding:16px;">
-  <b>🔥 Highlight: Stay consistent and trust the process! تثبت، وثابر على التعلم اليومي ولو بخطوات صغيرة، فالنمو الحقيقي يحتاج وقت وصبر وصدق في العمل.</b>
-</div>
-
----
-
-<div align="center">
-  <h3>🚀 Never stop growing — your future self will thank you!<br><span dir="rtl">🚀 لا تتوقف عن التعلم والنمو — نفسك المستقبلية ستشكرك!</span></h3>
-</div>
-
----
-
-<!-- END -->
+<p align="center">
+  <b>Ready to become a frontend ace? Let's go! 🚀</b>
+</p>
