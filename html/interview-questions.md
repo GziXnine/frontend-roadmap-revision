@@ -1,161 +1,255 @@
-# Comprehensive Accessibility Interview Q&A
+## 🗂️ Table of Contents
 
-This guide covers frequently asked accessibility questions for HTML and front-end engineering interviews. It features detailed explanations, comparison tables, code examples, and best practices for real-world front-end development.
-
----
-
-## 1. What is ARIA and when should you use it?
-
-**ARIA** (Accessible Rich Internet Applications) is a set of attributes that improve the accessibility of web content and web applications, especially for people using assistive technologies (like screen readers).
-
-### When to Use ARIA
-- **Custom UI Components:** When native HTML cannot convey semantic meaning (e.g., custom dropdowns, modals).
-- **State & Property Indication:** To expose states (like `aria-checked`, `aria-expanded`) and roles (like `role="dialog"`).
-- **Not in Place of Semantics:** Do **not** use ARIA when native elements suffice. Native HTML elements are always preferred.
-
-| Native Element              | ARIA Equivalent Example              |
-|----------------------------|--------------------------------------|
-| `<button>`                 | `<div role="button">`               |
-| `<ul>` / `<li>`            | `<div role="list">/<div role="listitem">` |
-| `<a href=...>`             | `<span role="link">`                |
-
-**Use native elements whenever possible!**
-
-#### Code Example: Good vs Bad
-
-**Bad:**
-```html
-<div role="button" onclick="doSomething()">Submit</div>
-```
-
-**Good:**
-```html
-<button onclick="doSomething()">Submit</button>
-```
+1. [How to Link CSS & JS: The `rel` Attribute](#1-how-to-link-css--js-the-rel-attribute)
+2. [All Tags & Attributes in `<head>`](#2-all-tags--attributes-in-head)
+3. [Description Lists: `dl`, `dt`, `dd`](#3-description-lists-dl-dt-dd)
+4. [Table Attributes: `headers`, `scope`, `abbr`](#4-table-attributes-headers-scope-abbr)
+5. [All Semantic HTML Tags](#5-all-semantic-html-tags)
+6. [Visual Diagram: Semantic Layout](#6-visual-diagram-semantic-layout)
+7. [Label, ARIA, and Accessibility](#7-label-aria-and-accessibility)
+8. [ARIA Cheat Sheet](#8-aria-cheat-sheet)
+9. [Semantic Tags vs ARIA Roles](#9-semantic-tags-vs-aria-roles)
+10. [Accessibility Best Practices](#10-accessibility-best-practices)
+11. [Quirks Mode vs Standards Mode](#11-quirks-mode-vs-standards-mode)
 
 ---
 
-## 2. Why is the `<label>` element important?
+## 1. How to Link CSS & JS: The `rel` Attribute
 
-The `<label>` element links description text to form controls, improving:
-- Usability (clicking label focuses input)
-- Accessibility (screen readers associate label with control)
-- Compliance (WCAG, Section 508)
+The `rel` attribute in the `<link>` tag defines the relationship between the current document and the linked resource.
 
-**Always associate labels with their controls:**
+**Common values for `rel`:**
 
+| rel Value      | Purpose                                 |
+|---------------|-----------------------------------------|
+| stylesheet    | Link a CSS file                         |
+| icon          | Favicon for the page                    |
+| manifest      | Web app manifest                        |
+| preconnect    | Initiate early connection to a domain   |
+| preload       | Preload resource (CSS, JS, fonts, etc.) |
+| alternate     | Alternate version (e.g., RSS feed)      |
+| canonical     | Preferred URL for SEO                   |
+
+**Example:**
 ```html
-<label for="username">Username</label>
-<input id="username" name="username" type="text">
+<!-- Link CSS -->
+<link rel="stylesheet" href="styles.css">
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico">
+<!-- Preload font -->
+<link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
-Or using `label` nesting:
-
-```html
-<label>Username
-  <input name="username" type="text">
-</label>
-```
-
-**Avoid:**
-- Omitting the label or using placeholder text only
+**Other attributes for `<link>`:**
+- `href`: URL of the resource
+- `type`: MIME type (e.g., `text/css`)
+- `media`: Media type (e.g., `screen`, `print`)
+- `as`: Resource type for `preload`/`prefetch`
+- `crossorigin`: CORS settings
+- `sizes`: Icon sizes
 
 ---
 
-## 3. Semantic Tags vs. ARIA Roles
+## 2. All Tags & Attributes in `<head>`
 
-### Semantic HTML Advantages
-- Communicates structure natively to browsers and assistive tech
-- No extra attributes needed
+The `<head>` contains metadata and resources for the page.
 
-### When to Use ARIA Roles
-- When no appropriate semantic element exists
+**Common tags/attributes:**
 
-| Structural Purpose         | Semantic Tag         | ARIA Role Equivalent    |
-|---------------------------|----------------------|------------------------|
-| Navigation                | `<nav>`              | `role="navigation"`   |
-| Main Content              | `<main>`             | `role="main"`         |
-| Article/Blog              | `<article>`          | `role="article"`      |
-| Button                    | `<button>`           | `role="button"`       |
-| Heading                   | `<h1>`-`<h6>`        | `role="heading"`      |
+| Tag/Attribute         | Purpose                                      |
+|----------------------|----------------------------------------------|
+| `<title>`            | Page title (shown in browser tab)            |
+| `<meta charset>`     | Character encoding (e.g., UTF-8)             |
+| `<meta name>`        | Metadata (description, viewport, etc.)       |
+| `<link rel>`         | Link to CSS, icons, manifest, etc.           |
+| `<style>`            | Internal CSS                                 |
+| `<script>`           | JS (rare in head, usually before `</body>`)  |
+| `<base>`             | Base URL for relative links                   |
 
-**Best Practice:** Use semantic tags first, ARIA roles only when needed!
+**Example:**
+```html
+<head>
+	<title>My Awesome Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A guide to HTML accessibility and semantics.">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="favicon.ico">
+</head>
+```
 
 ---
 
-## 4. Making Tables Accessible
+## 3. Description Lists: `dl`, `dt`, `dd`
 
-Accessible tables help screen reader users understand relationships between data.
+- `<dl>`: Description List container
+- `<dt>`: Term (name)
+- `<dd>`: Description (definition)
 
-### Key Practices
-- **Always use `<th>` for headers** (and scope them properly)
-- **Add `scope` attribute** for header cells (`row`, `col`)
-- **Use `<caption>`** to describe the table’s purpose
-- **Keep tables simple** when possible
+**Example:**
+```html
+<dl>
+	<dt>HTML</dt>
+	<dd>HyperText Markup Language</dd>
+	<dt>CSS</dt>
+	<dd>Cascading Style Sheets</dd>
+</dl>
+```
 
-#### Example:
+---
+
+## 4. Table Attributes: `headers`, `scope`, `abbr`
+
+- `scope`: Specifies if a `<th>` is a row or column header (`col`, `row`)
+- `headers`: Associates a `<td>` with one or more `<th>` by ID
+- `abbr`: Short description for header cells (for screen readers)
+
+**Example:**
 ```html
 <table>
-  <caption>Monthly Sales Data</caption>
-  <thead>
-    <tr>
-      <th scope="col">Month</th>
-      <th scope="col">Sales</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>January</td>
-      <td>$10,000</td>
-    </tr>
-  </tbody>
+	<caption>Employee Directory</caption>
+	<thead>
+		<tr>
+			<th scope="col" abbr="ID">Employee ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Role</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td headers="id">001</td>
+			<td headers="name">Alice</td>
+			<td headers="role">Developer</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
 ---
 
-## 5. Role of the `<head>` Tag and “Hidden” Accessibility Elements
+## 5. All Semantic HTML Tags
 
-### `<head>` Tag: Why It Matters
-- Contains crucial metadata (e.g., `<title>`, `<meta>`, `<link>`)
-- The `<title>` element is vital for assistive technology—it’s read aloud when a page loads
-- Use descriptive, unique page titles and accurate language attributes
+| Tag         | Purpose                        |
+|-------------|-------------------------------|
+| `<header>`  | Page or section header         |
+| `<nav>`     | Navigation links               |
+| `<main>`    | Main content                   |
+| `<section>` | Thematic grouping of content   |
+| `<article>` | Self-contained content         |
+| `<aside>`   | Sidebar, tangential content    |
+| `<footer>`  | Page or section footer         |
+| `<figure>`  | Media with caption             |
+| `<figcaption>` | Caption for `<figure>`      |
+| `<mark>`    | Highlighted text               |
+| `<time>`    | Date/time                      |
+| `<address>` | Contact info                   |
+| `<details>` | Disclosure widget              |
+| `<summary>` | Summary for `<details>`        |
+| `<dialog>`  | Dialog/modal                   |
 
-```html
-<head>
-  <title>Dashboard - Sales Analytics</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-```
+---
 
-### Hidden Elements and Accessibility
-- Use `aria-hidden="true"` (removes elements from assistive tech navigation)
-- Don’t hide important content
-- For visually hidden but accessible text, use utility classes:
+## 6. Visual Diagram: Semantic Layout
 
-```css
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-```
+```mermaid
+graph TD;
+	header[Header]
+	nav[Nav]
+	main[Main]
+	section1[Section]
+	article1[Article]
+	aside[Aside]
+	footer[Footer]
 
-```html
-<button>
-  Search <span class="sr-only">site content</span>
-</button>
+	header --> nav
+	header --> main
+	main --> section1
+	section1 --> article1
+	main --> aside
+	main --> footer
 ```
 
 ---
 
-## 6. Top 8 Accessibility Best Practices for HTML
+## 7. Label, ARIA, and Accessibility
+
+### The `<label>` Element
+- Associates text with form controls for usability and accessibility.
+- Clicking the label focuses the input.
+- Screen readers announce the label with the input.
+
+**Example:**
+```html
+<label for="email">Email Address</label>
+<input id="email" name="email" type="email">
+```
+Or:
+```html
+<label>Email Address
+	<input name="email" type="email">
+</label>
+```
+
+**Best Practice:** Always use a label for every input.
+
+### ARIA (Accessible Rich Internet Applications)
+- Adds accessibility info when native HTML is not enough.
+- Use only when semantic HTML cannot achieve the goal.
+
+**Common ARIA attributes:**
+| Attribute         | Purpose                                 |
+|-------------------|-----------------------------------------|
+| `aria-label`      | Defines a label for an element          |
+| `aria-labelledby` | References another element as label     |
+| `aria-hidden`     | Hides element from assistive tech       |
+| `aria-expanded`   | Indicates expanded/collapsed state      |
+| `aria-checked`    | Checkbox/radio state                    |
+| `role`            | Defines the element's role              |
+
+**Example:**
+```html
+<button aria-label="Close modal">✖</button>
+```
+
+---
+
+## 8. ARIA Cheat Sheet
+
+| Role/Attribute         | Use Case Example                      |
+|-----------------------|---------------------------------------|
+| `role="button"`       | Custom clickable element              |
+| `aria-checked`        | Checkbox state                        |
+| `aria-expanded`       | Accordion, dropdown                   |
+| `aria-hidden`         | Hide from screen readers               |
+| `aria-label`          | Custom label for element              |
+| `aria-live`           | Announce dynamic content              |
+| `aria-modal`          | Mark modal dialogs                    |
+
+**Accordion Example:**
+```html
+<button aria-expanded="false" aria-controls="panel1" id="accordion1">Section 1</button>
+<div id="panel1" role="region" aria-labelledby="accordion1" hidden>
+	Accordion content here.
+</div>
+```
+
+---
+
+## 9. Semantic Tags vs ARIA Roles
+
+| Purpose         | Semantic Tag   | ARIA Role Equivalent    |
+|-----------------|---------------|------------------------|
+| Navigation      | `<nav>`       | `role="navigation"`   |
+| Main Content    | `<main>`      | `role="main"`         |
+| Article         | `<article>`   | `role="article"`      |
+| Button          | `<button>`    | `role="button"`       |
+| Heading         | `<h1>`-`<h6>` | `role="heading"`      |
+
+**Best Practice:** Use semantic tags first. Use ARIA roles only when no semantic tag exists.
+
+---
+
+## 10. Accessibility Best Practices
 
 1. **Use Semantic HTML** – Prefer `<nav>`, `<main>`, `<article>`, etc.
 2. **Always Label Inputs** – With the `<label>` element
@@ -168,20 +262,51 @@ Accessible tables help screen reader users understand relationships between data
 
 ---
 
-## 7. Practical Summary Table: Use of ARIA vs HTML
+## 11. Quirks Mode vs Standards Mode
 
-| Need                                  | Prefer HTML/Native | Prefer ARIA        |
-|----------------------------------------|--------------------|--------------------|
-| Button                                | `<button>`         | `<div role="button">` (if absolutely needed) |
-| Section Heading                       | `<h1>`-`<h6>`      | `role="heading"`  |
-| List                                  | `<ul>`, `<ol>`, `<li>` | `role="list"`, `role="listitem"` |
-| Simple Table                          | `<table>`, `<th>`  | ARIA attributes (complex tables only) |
-| Landmark Regions                      | `<nav>`, `<main>`, `<aside>`, `<header>` | `role="navigation"` (if custom) |
+**Quirks Mode** and **Standards Mode** are two rendering modes used by browsers to display web pages. They affect how HTML and CSS are interpreted.
 
----
+### What is Quirks Mode?
+- Triggered by old or missing DOCTYPE declarations.
+- Browsers emulate non-standard, legacy behavior for compatibility with old sites.
+- Can cause layout bugs, inconsistent box model, and unexpected results.
 
-## 8. Top Accessibility Resources
+### What is Standards Mode?
+- Triggered by a proper, modern DOCTYPE (e.g., `<!DOCTYPE html>`).
+- Browsers use the latest HTML and CSS specifications.
+- Ensures consistent, predictable rendering across browsers.
 
+### Example: DOCTYPE Declaration
+```html
+<!-- Standards Mode (recommended) -->
+<!DOCTYPE html>
+<html>
+	<head>...</head>
+	<body>...</body>
+</html>
+
+<!-- Quirks Mode (not recommended) -->
+<!-- No DOCTYPE or old/broken DOCTYPE -->
+<html>
+	<head>...</head>
+	<body>...</body>
+</html>
+```
+
+### How to Avoid Quirks Mode
+- Always start your HTML files with `<!DOCTYPE html>`.
+- Validate your HTML to ensure standards compliance.
+
+**Summary Table:**
+
+| Mode         | How Triggered           | Behavior                |
+|--------------|-------------------------|-------------------------|
+| Quirks Mode  | Missing/old DOCTYPE     | Legacy, non-standard    |
+| Standards    | `<!DOCTYPE html>`       | Modern, standard        |
+
+**Tip:** Use Standards Mode for all modern web development!
+
+## 🌐 Resources
 - [WebAIM: Quick Reference](https://webaim.org/resources/quickref/)
 - [MDN: ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 - [Deque University](https://dequeuniversity.com/)
@@ -189,4 +314,4 @@ Accessible tables help screen reader users understand relationships between data
 
 ---
 
-**Tip:** Learn to use browser accessibility tools and screen readers in practice!
+**Tip:** Use browser accessibility tools and screen readers to test your work!
