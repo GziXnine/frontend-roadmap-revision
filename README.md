@@ -15,6 +15,7 @@
 <div align="center">
   <img src="https://img.shields.io/badge/status-in%20progress-blue?style=flat-square" alt="Status" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License" />
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=GziXnine/frontend-roadmap-revision" alt="Visitors">
 </div>
 
 <br/>
@@ -69,7 +70,7 @@
 
 | Area             | Fundamentals 🟩 | Interview 🟦 | Tricks/Notes 🟨 | Progress |
 |------------------|:--------------:|:------------:|:--------------:|:--------:|
-| HTML             | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| HTML             | ✅             | ✅           | ⬜️             | 66%       |
 | CSS              | ⬜️             | ⬜️           | ⬜️             | 0%       |
 | SCSS             | ⬜️             | ⬜️           | ⬜️             | 0%       |
 | Bootstrap        | ⬜️             | ⬜️           | ⬜️             | 0%       |
@@ -78,8 +79,6 @@
 | TypeScript       | ⬜️             | ⬜️           | ⬜️             | 0%       |
 | React            | ⬜️             | ⬜️           | ⬜️             | 0%       |
 | Next.js          | ⬜️             | ⬜️           | ⬜️             | 0%       |
-
-_Update each section as you advance for visual tracking!_
 
 ---
 
