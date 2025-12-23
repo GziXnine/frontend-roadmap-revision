@@ -1,0 +1,107 @@
+/* ! Nesting */
+.parent {
+  color: red;
+
+  .child1 {
+    color: blue;
+
+    /* TODO You Can Use '&' or Not In This Case => U Should Search About It */
+    & span {
+      color: green;
+    }
+  }
+
+  .child2 {
+    color: yellow;
+
+    span {
+      color: orange;
+    }
+  }
+}
+
+/* ! Border Block */
+
+.one {
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  background-color: #EEE;
+  margin: 30px 0;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+.two {
+  /** border-block: 2px solid red; */
+  border-block-start: 2px solid red;
+  border-block-end: 2px solid red;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+/* ! Where Pseudo Element */
+
+.parent1:where(h3, div, p) :where(a, span) {
+  color: red;
+}
+
+/* ! There's A New Feature In CSS => When U Use a text-wrap: nowarp OR wrap U Can Use A balanced This Make A line The Same Width.. */
+
+/* ! Has Pseudo Element */
+
+/* TODO:- This Choose A Div If Has A "a" Or "span" ^_^ */
+.a .b:has(a, span) {
+  border: 2px solid green;
+}
+
+/* TODO:- This Choose A Div If Has A "a" And "span" ^_^ */
+.a .b:has(a):has(span) {
+  border: 2px solid red;
+}
+
+/* ! nth-child => nth-child(2 of .element) {} */
+
+/* ! Is Pseudo Element */
+
+.parent1:is(h3, div, p) :is(a, span) {
+  color: orange;
+}
+
+/* ! This's A Good Style For Text Like For Link And Text ^_^ */
+
+.div .p p {
+  text-decoration-line: overline;
+  -moz-text-decoration-line: overline;
+  text-decoration-color: red;
+  -moz-text-decoration-color: red;
+  text-decoration-style: wavy;
+  -moz-text-decoration-style: wavy;
+  color: red;
+}
+
+.div .p a {
+  text-decoration-line: overline;
+  -moz-text-decoration-line: overline;
+  text-decoration-color: red;
+  -moz-text-decoration-color: red;
+  text-decoration-style: wavy;
+  -moz-text-decoration-style: wavy;
+  color: red;
+}
+
+/* ! Empty Pseudo Element */
+
+/* ! There's A Good Attribute Name user-selector */
+
+body {
+  user-select: none;
+  /* user-select: all; */
+}
+
+/* ! outline And outline-offset */
+
+/* ! Don't Forget A Scroll Padding... */
+
+/* ! Marker Pseudo ELement */

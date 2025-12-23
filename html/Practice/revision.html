@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width:device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f0f0f0">
+  <title>Check</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <audio controls autoplay muted loop>
+    <source src="audio.mp3" type="audio/mp3">
+    <source src="audio.mpeg" type="audio/mpeg">
+
+    This Website Doesn't Support This Audio Type.
+  </audio>
+
+  <br>
+
+  <video controls autoplay muted loop poster="imges.png" width="400" height="300">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+
+    This Website Doesn't Support This Video Type.
+
+    <track src="english.vtt" king="subtitles" srclang="en" label="English">
+    <track src="german.vtt" king="subtitles" srclang="gr" label="German">
+  </video>
+
+  <br>
+
+  <p>H<sub>2</sub>o</p>
+  <p>2<sup>2</sup></p>
+
+  <br>
+
+  <ol type="I" reversed>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+  </ol>
+
+  <ol start="15">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+  </ol>
+
+  <ol>
+    <li value="15">A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+  </ol>
+
+  <table border="1" cellpadding="12">
+    <caption>Complex Table</caption>
+
+    <thead>
+      <th>Year</th>
+      <th>Group</th>
+      <th>Language</th>
+      <th>Done</th>
+      <th>Passed</th>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td rowspan="5">2022</td>
+        <td rowspan="2">Elzero</td>
+        <td>HTML</td>
+        <td colspan="2">Yes</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td colspan="2">Yes</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Heroes</td>
+        <td>JS</td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td>PHP</td>
+        <td colspan="2">Yes</td>
+      </tr>
+      <tr>
+        <td>Python</td>
+        <td>No</td>
+        <td>No</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <td colspan="4">Total</td>
+      <td>299</td>
+    </tfoot>
+  </table>
+
+  <br>
+
+  <form action="" method="get" novalidate target="_blank">
+    <label for="select-input">Programming Language</label>
+    <select id="select-input" name="prog-lang">
+      <optgroup label="Front">
+        <option value="HTML">HTML</option>
+        <option value="CSS" selected>CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </optgroup>
+      <optgroup label="Back">
+        <option value="CSharp">CSharp</option>
+        <option value="EF">EF Core</option>
+        <option value="Entity">Entity Framework</option>
+      </optgroup>
+    </select>
+
+    <br>
+
+    <label for="datalist-input">Programming Language</label>
+    <input id="datalist-input" list="datalist" name="prog-lang">
+    <datalist id="datalist">
+      <option value="HTML">HTML</option>
+      <option value="CSS" selected>CSS</option>
+      <option value="Js">JavaScript</option>
+      <option value="C#">CSharp</option>
+      <option value="EF">EF Core</option>
+      <option value="Entity">Entity Framework</option>
+    </datalist>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,894 @@
+<!-- What's the "HTML" => this a Hyper Text Markup Language -->
+<!-- The Language to build the web -->
+<!-- This course have from Html to Html (5). -->
+<!--! Always Search -->
+<!--? https://www.w3schools.com/html/default.asp -->
+<!-- Have a target -->
+<!-- Start Any Idea -->
+
+<!-- 
+! "DOCTYPE," is an instruction to the web browser about what version of HTML the page is written in.
+! It ensures that the web page is rendered correctly and consistently across different browsers.
+-->
+<!-- 
+! Quirks Mode vs. Standards Mode: The presence and correctness of the DOCTYPE declaration affect how browsers render the page. 
+! An incorrect or missing DOCTYPE may cause the browser to render the page in "quirks mode," which tries to emulate the behavior of older browsers. 
+! This can lead to inconsistent rendering across different browsers. 
+! A correct DOCTYPE ensures the page is rendered in "standards mode," which adheres to the current web standards.
+-->
+<!DOCTYPE html>
+<!-- HTML (5), U can use it as small or captial symbols. not case-sensitive -->
+<!-- 
+*HTML 4.01 Strict
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+*HTML 4.01 Transitional
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+*XHTML 1.0 Strict
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-->
+<html lang="en">
+<!-- To Use an English Language -->
+
+<head>
+  <!-- 
+    ? https://elzero.org/everything-about-meta-tag/
+  -->
+  <!-- ISO-8859-1 => Doesn't Support Arabic -->
+  <meta charset="ISO-8859-1" />
+
+  <!-- Self Closing tag -->
+  <!-- UTF-8 => Support Arabic -->
+  <meta charset="UTF-8" />
+  <!--* Unicode Transformation Format -->
+  <title>Book Store</title>
+  <meta name="description" content="This is our Store" />
+  <!-- name & content this's name is attribute -->
+  <meta name='description' content="This is our Store" />
+  <!-- U can use single or double quote -->
+  <meta name=description content="This is our Store" />
+  <!-- if it a single word U can delete a single or double quote -->
+  <meta name="copyright" content="Allam Group" />
+  <meta name="Author" content="Allam" />
+  <!-- Author -->
+  <meta name="revised" content="Tuesday, July 20th, 2019, 10:15 am" />
+  <!-- وهو الجزء الخاص بمراجعة الصفحة فيمكنك وضع التاريخ الذي قمت بمراجعة الصفحة فيه وعلى سبيل المثال قمت بكتابة مقال معين يمكن أن تضع هذا الجزء لتوضح انك قمت بتحديث المقال مؤخرا ليظهر في محرك البحث للشخص قبل الدخول على المقال -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- التحكم فى عرض الصفحة ب اختلاف المتصفح المستخدم او ابعاده يعمل على تنظيم شكل المتصفح مثل معانيه و كما يفهم من كتابته -->
+  <meta name="robots" content="index, follow" />
+  <!-- 
+      TODO: Using the robots meta tag correctly can influence how your site is crawled and indexed by search engines, which can affect its visibility and ranking in search results. It’s a valuable tool for managing SEO (Search Engine Optimization) strategies.
+    -->
+  <!-- <meta http-equiv="refresh" content="60; https://machinelearningworkshop.com/regTimeout" /> -->
+  <meta http-equiv="content-security-policy" content="default-src https:" />
+  <meta name="theme-color" content="#226DAA" />
+  <!-- From CSS -->
+  <!--! 5. Updated CSS for Modern Practices: -->
+  <style>
+    /* Modern CSS Reset */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Root variables for consistent theming */
+    :root {
+      --primary-color: #226DAA;
+      --text-color: #333;
+      --background-color: aliceblue;
+      --border-radius: 8px;
+      --spacing: 1rem;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: var(--spacing);
+    }
+
+    /* Modern focus styles for accessibility */
+    :focus-visible {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Grid layout for modern structure */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing);
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-color: #f0f0f0;
+        --background-color: #1a1a1a;
+      }
+    }
+
+    /* Reduced motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- From JavaScript -->
+  <script>
+    alert("Welcome to our Store");
+  </script>
+  <!-- To link a CSS and JS to Html 'rel => relations between to files' -->
+  <link rel="stylesheet" href="" />
+</head>
+
+<body>
+  <!-- Headings from h1 -> h6 have a some style -->
+  <!-- ! Should be One Time -->
+  <h1>This Is My Book Store, Welcome</h1> <!--* h1 is the most important heading and the biggest one -->
+  <h2>This Is My Book Store, Welcome</h2>
+  <h3>This Is My Book Store, Welcome</h3>
+  <h4>This Is My Book Store, Welcome</h4>
+  <h5>This Is My Book Store, Welcome</h5>
+  <h6>This Is My Book Store, Welcome</h6>
+
+  <p class="one">This Is My Book Store, Welcome</p>
+  <!-- paragraph is a 'block' element -->
+  <p class="two">We Have a Big Sale</p>
+  Line 1 <br />
+  <!-- br is using to break a line or make a new line -->
+  Line 2 Line 3
+  <p hidden>Ahmed Allam</p>
+  <!--* There's a global attribute and U Can Use It To Hidden Any Code From HTML Code. -->
+
+  <!-- 
+    src => source 
+    alt => alternative 
+    -->
+  <br>
+  <img src="https://user-images.githubusercontent.com/63050133/156676671-d5b2e362-97d4-4404-9447-dd71ddfea82f.gif"
+    alt="" />
+  <br>
+  <img width="200" src="FB_IMG_1601598026208.jpg" alt="Logo Pic" />
+  <img width="200" src="imgs/FB_IMG_1601598026208.jpg" alt="Logo Pic" />
+  <img width="200" src="imgs/home/FB_IMG_1601598026208.jpg" alt="Logo Pic" />
+  <img width="200" src="../FB_IMG_1601598026208.jpg" alt="Logo Pic" />
+  <br>
+
+  <a href="https://google.com" target="_blank" title="Go To Google">Google</a> <!-- (a) => Anchor Tag -->
+  <a href="https://facebook.com" title="Go To Facebook">Facebook</a> <!-- Inline -->
+  <a href="#allam">Allam Paragraph</a> <!-- Don't Forget # Character -->
+  <a href="mailto:o@nn.sa">Contact Me</a>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p id="allam">Ahmed Allam Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste
+    laudantium cupiditate reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum!
+    Pariatur quae cum eaque?</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti libero neque iste laudantium cupiditate
+    reprehenderit, nesciunt sed, quidem recusandae at minima, laborum fugiat veritatis illum! Pariatur quae cum eaque?
+  </p>
+
+  <!-- TODO: U Should Search About This Attribute ^_^ -->
+  <!-- ! muted => Doesn't Work In Google Chrome  -->
+  <audio controls autoplay loop muted>
+    <!-- 
+      * src => source
+      * type => name a mime type 
+        TODO: search about that 
+          ? https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+    -->
+    <source src="media/audio/allam.mp3" type="audio/mpeg">
+    <!-- * If a browser doesn't support the audio tag U should write a sentence to show him what happen -->
+    Your Browsers Doesn't Support This Audio Tag
+  </audio>
+
+  <br>
+
+  <!-- TODO: U Should Search About This Attribute ^_^ -->
+  <video controls width="700" hight="500" autoplay loop muted poster="imgs/FB_IMG_1601598026208.jpg">
+    <source src="media/video/ghost.mp4" type="video/mp4">
+    <source src="media/video/ghost.ogg" type="video/ogg">
+    <!-- * If a browser doesn't support the video tag U should write a sentence to show him what happen -->
+    Your Browsers Doesn't Support This Video Tag
+    <!-- * vtt => Video Text Track -->
+    <track src="myVideo_en.vtt" kind="subtitles" srclang="en" label="English">
+    <track src="myVideo_it.vtt" kind="subtitles" srclang="it" label="Italian">
+  </video>
+
+  <!-- TODO: Search about preload -->
+
+  <!--
+    ? B => Bold
+    ? Strong => Important Bold Text
+    ? I => Italic
+    ? Em => Emphasized Text
+    ? U => Underline
+    ? S => Strike Through
+    ? Sub => Subscript
+    ? Sup => Superscript
+    ? Del => Deleted Text
+    ? Mark => Make a Highlight in Word
+    ? Small => Make a Small Word
+    ? ins => insert a text like an Under line 
+    -->
+
+  <!-- Bold -->
+  <p>This Is My <b>Book Store</b>, Welcome</p>
+  <!-- Important Bold Text -->
+  <p>This Is My <strong>Book Store</strong>, Welcome</p>
+  <!-- Italic -->
+  <p>This Is My <i>Book Store</i>, Welcome</p>
+  <p>This Is My <s>Book Store</s>, Welcome</p>
+  <!-- important Italic word -->
+  <p>This Is My <em>Book Store</em>, Welcome</p>
+  <!-- Mark make a highlight -->
+  <p>This Is My <b>Book Store</b>, <mark>Welcome</mark></p>
+  <!-- Make an under line -->
+  <p>This Is My <u>Book Store</u>, Welcome</p>
+  <!-- Make a small Word -->
+  <p>This Is My <b>Book Store</b>, <small>Welcome</small></p>
+  <!-- Make a deleted Text but not deleted  ^_^ -->
+  <p>This Is My <del>Book Store</del>, Welcome</p>
+  <p><del>100</del>$ 80$</p>
+  <p>This Is My <ins>Book Store</ins>, Welcome</p>
+  <p><b>2</b><sup>2</sup> = <b>4</b></p>
+  <p>
+  <h4>H<sub>2</sub>O</h4>
+  </p>
+
+  <!-- 
+    ! ul => Unorderd List 
+    ! li => List Item
+    ! ol => Orderd List
+    -->
+
+  <ul>
+    <li>A</li>
+    <li>H</li>
+    <li>M</li>
+    <li>E</li>
+    <li>D</li>
+  </ul>
+
+  <!-- reversed => Making an reverse to the order -->
+  <ol reversed>
+    <li>A</li>
+    <li>H</li>
+    <li>M</li>
+    <li>E</li>
+    <li>D</li>
+  </ol>
+
+  <!-- Start from position -->
+  <ol start="7">
+    <li>A</li>
+    <li>H</li>
+    <li>M</li>
+    <li>E</li>
+    <li>D</li>
+  </ol>
+
+  <!-- Value same like start but i write it in li and start from position -->
+  <ol>
+    <li value="50">A</li>
+    <li>H</li>
+    <li>M</li>
+    <li>E</li>
+    <li>D</li>
+  </ol>
+
+  <!-- Type of Sorting -->
+  <ol type="I">
+    <li>A</li>
+    <li>H</li>
+    <li>M</li>
+    <li>E</li>
+    <li>D</li>
+  </ol>
+
+  <!--
+    ! <dl> => Description List (container for terms & definitions)
+    ! <dt> => Description Term (the word or name being defined)
+    ! <dd> => Description Definition (the actual definition or explanation of the term)
+  -->
+
+  <dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language - the standard for structuring web content.</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets - used to style and layout web pages.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>A programming language that enables dynamic behavior in web pages.</dd>
+  </dl>
+
+  <!-- 
+    ! thead 
+    ! tbody
+    ! tfoot
+    ! tr => Table Row 
+    ! td => Table Data in Cell
+    ! th => Table Header (Makes a Font Bold)
+    -->
+
+  <table border="1" cellpadding="5">
+    <caption>
+      Student Marks
+    </caption>
+    <thead>
+      <th id="h-id" abbr="ID" scope="col">No.</th>
+      <th id="h-name" abbr="Name" scope="col">Name</th>
+      <th id="h-grade" abbr="Grade" scope="col">Grade</th>
+    </thead>
+
+    <!-- <thead>
+      <td>No.</td>
+      <td>Name</td>
+      <td>Grade</td>
+    </thead> -->
+
+    <tbody>
+      <tr>
+        <td header="h-id">1</td>
+        <td header="h-name">Ahmed</td>
+        <td header="h-grade" rowspan="2">150</td>
+      </tr>
+
+      <tr>
+        <td header="h-id">2</td>
+        <td header="h-name">Allam</td>
+      </tr>
+
+      <tr>
+        <td header="h-id">3</td>
+        <td header="h-name">Mohammed</td>
+        <td header="h-grade">130</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <td colspan="2">Total</td>
+      <td>280</td>
+    </tfoot>
+  </table>
+
+  <!-- As a single Word but i can Catch it ^_^ -->
+  <span>Allam</span>
+
+  <p>Ahmed Allam</p> <br>
+  <p>Engineering</p>
+  <hr>
+  <!--  
+    ! hr => Make a Horizontal Line 
+    -->
+
+  <!-- TODO: Div => Don't use it in Word use a paragraph -->
+  <div id="Romatic">
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="Fantasy">
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="Police">
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+    <div>
+      <h3>book Name</h3>
+      <p>book Description</p>
+      <span>100$</span>
+    </div>
+  </div>
+
+  <!-- 
+      HTML Entities 
+      ? https://www.w3schools.com/html/html_entities.asp
+        ! &entity_name;
+        ! &#entity_number;
+    -->
+  <div><br>This is My &lt;&#60;P&gt; Div &copy;&nbsp;</div>
+
+  <!-- TODO: Search about this types Bro <3... -->
+  <header></header>
+  <nav></nav>
+  <section>
+    <figure>
+      <img src="imgs/home/FB_IMG_1601598026208.jpg" alt="Site Logo">
+      <figcaption>This is a Beautiful girl</figcaption>
+    </figure>
+  </section>
+  <aside></aside>
+  <article></article>
+  <footer></footer>
+
+  <br>
+  <div class="header">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Servies</li>
+      <li>Contact Us</li>
+    </ul>
+  </div>
+  <hr>
+  <div class="nav">
+    <ul>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+      <li>Link</li>
+    </ul>
+  </div>
+  <hr>
+  <div class="section">Section</div>
+  <hr>
+  <div class=aside>Side Bar</div>
+  <hr>
+  <div class="footer">Footer</div>
+  <hr>
+
+  <!-- 
+      ! If U need to make a inputs and button you should to put all them in a <form>....
+      ! Attribute action this function collect all input in this form and send it to a website or file in Ur project.
+    -->
+  <form action="" method="get" novalidate target="_blank">
+    <div>
+      <label for="">Username</label>
+      <input type="text" required placeholder="Username" value="Allam" name="UserName" readonly>
+    </div>
+    <br>
+    <div>
+      <label for="">Subject</label>
+      <input type="text" required placeholder="Subject" value="" name="Subject"> <!-- autofocus -->
+    </div>
+    <br>
+    <div>
+      <label for="">Password</label>
+      <input type="password" required placeholder="Write a complex password" value="asdpop" name="PassWord"
+        minlength="8" maxlength="20" />
+    </div>
+    <br>
+    <div>
+      <label for="">Email</label>
+      <input type="email" required placeholder="Write a vilad email." value="o@ss.na" name="Email" disabled>
+    </div>
+    <!-- <br> -->
+    <div>
+      <!-- <label for="">ID</label> -->
+      <input type="hidden" required placeholder="Enter Your ID" value="3782647234697236423" name="ID">
+    </div>
+    <br>
+    <div>
+      <label for="">Color</label>
+      <input type="color" required name="Color" />
+    </div>
+    <br>
+    <div>
+      <label for="">Range</label>
+      <input type="range" required name="Range" min="0" max="100" step="10" value="50" />
+    </div>
+    <br>
+    <div>
+      <label for="num">Number</label>
+      <input id="num" type="number" required name="Number" min="0" max="1000" step="10" value="0" />
+    </div>
+    <hr>
+    <div>
+      <input id="win" type="radio" name="os" value="Windows" checked />
+      <label for="win">Windows</label>
+    </div>
+    <div>
+      <input id="mac" type="radio" name="os" value="MAC" />
+      <label for="mac">MAC</label>
+    </div>
+    <div>
+      <input id="lin" type="radio" name="os" value="Linux" />
+      <label for="lin">Linux</label>
+    </div>
+    <hr>
+    <div>
+      <input id="win1" type="checkbox" name="os" value="Windows" checked />
+      <label for="win1">Windows</label>
+    </div>
+    <div>
+      <input id="mac1" type="checkbox" name="os" value="MAC" />
+      <label for="mac1">MAC</label>
+    </div>
+    <div>
+      <input id="lin1" type="checkbox" name="os" value="Linux" />
+      <label for="lin1">Linux</label>
+    </div>
+    <hr>
+
+    <label for="book">Choose Book:</label>
+    <select name="Book" id="book"> <!-- multiple -->
+      <optgroup label="numberOne">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </optgroup>
+      <optgroup label="numberTwo">
+        <option value="HTML" selected>HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+      </optgroup>
+    </select>
+    <br>
+    <label for="sub"></label>
+    <textarea name="Subject" id="sub" placeholder="Write a text, please!" rows="20" cols="60"></textarea>
+
+    <select name=book id=aaa>
+      <optgroup label="Group One">
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3" selected>CSS3</option>
+        <option value="JavaScript">JavaScript</option>
+      </optgroup>
+      <optgroup label="Group Two">
+        <option value="HTML5">HTML5</option>
+        <option value="CSS3">CSS3</option>
+        <option value="JavaScript">JavaScript</option>
+      </optgroup>
+    </select>
+
+    <label for="test1">Choose: </label>
+    <input id="test1" list="dataprog" name="test1" />
+    <datalist id="dataprog">
+      <option value="HTML5">HTML5</option>
+      <option value="CSS3">CSS3</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="PHP">PHP</option>
+      <option value="Python">Python</option>
+    </datalist>
+    <div>
+      <label for="file">Upload</label>
+      <input type="file" id="file" name="file" multiple />
+    </div>
+    <hr>
+    <div>
+      <label for="search">Search</label>
+      <input type="search" id="search" name="search" />
+    </div>
+    <hr>
+    <div>
+      <label for="Url">Url</label>
+      <input type="url" id="Url" name="Url" />
+    </div>
+    <hr>
+    <div>
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" />
+    </div>
+    <br>
+    <div>
+      <label for="month">Month</label>
+      <input type="month" id="month" name="month" />
+    </div>
+    <br>
+    <div>
+      <label for="time">Time</label>
+      <input type="time" id="time" name="time" />
+    </div>
+
+    <label for="list">Programming</label>
+    <input id="list" list="Programming" name="prog">
+    <datalist id="Programming">
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JavaScript">JavaScript</option>
+    </datalist>
+
+    <br>
+    <input type="hidden">
+    <input type="submit" value="Save">
+    <input type="reset" value="Reset">
+    <button>Submit</button>
+  </form>
+
+  <p>This a new quote</p>
+  <q>This a new quote</q>
+  <blockquote>This a new quote</blockquote>
+  <button>Click</button>
+  <!-- wbr => Word Break Opertuinty => work when your quote or sentence is a very long words not always. -->
+  <div>
+    https://www.youtube.com/watch?v=AzjtVtxoBLc&list=PLDoPjvoNmBAw_t_XWUFbBX-c9MafPk9ji&index=34
+  </div>
+  <div>
+    https://www.youtube.com/watch?v=<wbr>AzjtVtxoBLc&list=PLDoPjvoNmBAw_t_XWUFbBX-<wbr>c9MafPk9ji&index=34
+  </div>
+
+  <!-- bdi => Be Directions Isolation => hold a arabic words to avoid mistakes -->
+  <p>Welcome السلام 2</p>
+  <p>Welcome <bdi>السلام</bdi> 2</p>
+
+  <!-- You can write a code in this block and save this in one line -->
+  <code>
+      #include <stdio.h>
+
+      int main() {
+        printf("Free Palestine <3 \n");
+        return 0;
+      }
+  </code>
+
+  <pre>
+  <code>
+#include <stdio.h>
+
+int main() {
+  printf("Free Palestine <3 \n");
+  return 0;
+}
+      </code>
+  </pre>
+
+  <!-- Iframe gave U a website in your Website but not all websites allows that ^_^ -->
+  <iframe src="https://elzero.org" frameborder="0" width="1000" height="700">Elzero</iframe>
+
+  <!-- TODO: Accessibility => You should follow that to mantaince you website and make it very smart & good. -->
+
+  <!-- TODO: ARIA => Accessibility Reach Internet Application. -->
+
+  <!--
+    ! You Should Watch The Last Video In Elzero Web School..   
+  -->
+</body>
+
+</html>
+
+<!--! Some Edits From Github Copilot -->
+<!--! 1. Modern Meta Tags (Add to <head>): -->
+<!-- Open Graph Meta Tags for Social Media -->
+<meta property="og:title" content="Book Store - Your Learning Hub">
+<meta property="og:description" content="Comprehensive HTML5 learning resource">
+<meta property="og:image" content="imgs/FB_IMG_1601598026208.jpg">
+<meta property="og:url" content="https://yoursite.com">
+<meta property="og:type" content="website">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book Store - HTML5 Learning">
+
+<!-- Performance & Security -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="//example.com">
+
+<!-- PWA Manifest -->
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!--! 2. Modern HTML5 Elements (Add to <body>): -->
+<!-- Modern Form Elements -->
+<section id="modern-forms">
+  <h2>Modern HTML5 Form Features</h2>
+
+  <!-- New Input Types -->
+  <form>
+    <div>
+      <label for="week">Week Picker:</label>
+      <input type="week" id="week" name="week">
+    </div>
+
+    <div>
+      <label for="datetime-local">DateTime Local:</label>
+      <input type="datetime-local" id="datetime-local" name="datetime">
+    </div>
+
+    <!-- Form Validation with Pattern -->
+    <div>
+      <label for="phone">Phone (Pattern Validation):</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"
+        title="Phone format: 123-456-7890">
+    </div>
+
+    <!-- Custom Validity -->
+    <div>
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password"
+        oninput="this.setCustomValidity(this.value !== document.getElementById('password').value ? 'Passwords do not match' : '')">
+    </div>
+  </form>
+</section>
+
+<!-- Web Components Style -->
+<section id="web-components">
+  <h2>Modern Web Technologies</h2>
+
+  <!-- Details/Summary (Interactive Disclosure) -->
+  <details>
+    <summary>Click to expand - HTML5 Advanced Features</summary>
+    <p>This content is hidden by default and can be toggled.</p>
+    <ul>
+      <li>Progressive Web Apps (PWA)</li>
+      <li>Web Components</li>
+      <li>Service Workers</li>
+      <li>Web Assembly (WASM)</li>
+    </ul>
+  </details>
+
+  <!-- Progress Bar -->
+  <div>
+    <label for="progress">Learning Progress:</label>
+    <progress id="progress" value="75" max="100">75%</progress>
+  </div>
+
+  <!-- Meter Element -->
+  <div>
+    <label for="skill-level">HTML Skill Level:</label>
+    <meter id="skill-level" value="0.7" min="0" max="1" optimum="0.7">70%</meter>
+  </div>
+</section>
+
+<!-- Picture Element for Responsive Images -->
+<section id="responsive-images">
+  <h2>Responsive Images with Picture Element</h2>
+  <picture>
+    <source media="(max-width: 600px)" srcset="imgs/FB_IMG_1601598026208.jpg">
+    <source media="(max-width: 1200px)" srcset="imgs/home/FB_IMG_1601598026208.jpg">
+    <img src="imgs/FB_IMG_1601598026208.jpg" alt="Responsive logo" loading="lazy">
+  </picture>
+</section>
+
+<!--! 3. Modern Attributes and Features: -->
+<!-- Lazy Loading -->
+<img src="imgs/FB_IMG_1601598026208.jpg" alt="Logo" loading="lazy" decoding="async">
+
+<!-- Modern Video with better accessibility -->
+<video controls preload="metadata" poster="imgs/FB_IMG_1601598026208.jpg">
+  <source src="media/video/ghost.mp4" type="video/mp4">
+  <source src="media/video/ghost.webm" type="video/webm"> <!-- Add WebM for better compression -->
+  <track src="captions-en.vtt" kind="captions" srclang="en" label="English" default>
+</video>
+
+<!-- Modern iframe (remove frameborder, add security) -->
+<iframe src="https://elzero.org" width="1000" height="700" loading="lazy" sandbox="allow-scripts allow-same-origin"
+  title="Elzero Website">
+</iframe>
+
+<!--! 4. Future Web Technologies to Learn: -->
+<!-- Future Web Technologies Documentation -->
+<section id="future-tech">
+  <h2>🚀 Future Web Technologies & Trends (2024+)</h2>
+
+  <article>
+    <h3>1. Container Queries</h3>
+    <p>CSS Container Queries allow responsive design based on container size, not viewport</p>
+    <code>@container (min-width: 400px) { .card { flex-direction: row; } }</code>
+  </article>
+
+  <article>
+    <h3>2. Web Components</h3>
+    <p>Custom HTML elements with encapsulated functionality</p>
+    <p>Technologies: Custom Elements, Shadow DOM, HTML Templates</p>
+  </article>
+
+  <article>
+    <h3>3. Progressive Web Apps (PWA)</h3>
+    <p>Web applications that work like native apps</p>
+    <ul>
+      <li>Service Workers for offline functionality</li>
+      <li>Web App Manifest</li>
+      <li>Push Notifications</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>4. CSS-in-JS and CSS Modules</h3>
+    <p>Modern styling approaches for component-based development</p>
+  </article>
+
+  <article>
+    <h3>5. WebAssembly (WASM)</h3>
+    <p>Run high-performance code in browsers</p>
+  </article>
+
+  <article>
+    <h3>6. Web Streams API</h3>
+    <p>Handle streaming data efficiently</p>
+  </article>
+</section>
+
+<!-- Learning Resources Section -->
+<section id="learning-resources">
+  <h2>📚 Stay Updated - Learning Resources</h2>
+
+  <div>
+    <h3>Official Specifications:</h3>
+    <ul>
+      <li><a href="https://html.spec.whatwg.org/" target="_blank">WHATWG HTML Living Standard</a></li>
+      <li><a href="https://www.w3.org/TR/html52/" target="_blank">W3C HTML5.2 Specification</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Browser Support:</h3>
+    <ul>
+      <li><a href="https://caniuse.com/" target="_blank">Can I Use</a> - Browser compatibility</li>
+      <li><a href="https://web.dev/" target="_blank">Web.dev</a> - Google's web development guidelines</li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Performance & Accessibility:</h3>
+    <ul>
+      <li><a href="https://lighthouse-ci.com/" target="_blank">Lighthouse</a> - Performance auditing</li>
+      <li><a href="https://wave.webaim.org/" target="_blank">WAVE</a> - Accessibility testing</li>
+    </ul>
+  </div>
+</section>

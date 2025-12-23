@@ -1,0 +1,204 @@
+/* CSS => Cascade Style Sheet */
+/* Always Search */
+/* Have A Target */
+/* Always Search Before Ask */
+
+/*
+Selector { Curly braces 
+  Property:  خاصية من خواص css  Value; All Called Declaration 
+  PropertyTwo: Value;
+}
+*/
+
+p {
+  color: red;
+  font-size: 40px;
+}
+
+/*! If You Use a Class="" And You Want To Style it Use .name class */
+/*! Don't Use Id To Style In CSS Not A Best Practise. */
+.one {
+  color: rebeccapurple;
+  font-size: 30px;
+}
+
+/*! If You Use a id="" And You Want To Style it Use #name class */
+#one {
+  color: burlywood;
+  font-size: 40px;
+}
+
+div {
+  /* background-color: red; * Color Name */
+  /* background-color: rgb(28 211 202 / 50%); * Red Green Blue Alpha Channel */
+  /* background-color: #FF00FF; * Hex Code Two character Equal One Color */
+
+  /* background-image: url("../imgs/Mobile\ Banner\ Image.jpg"); */
+  /* The Defult Value Is Repeat U Can Use It repeat Or no-repeat Or repeat-x Or repeat-y */
+  /* background-repeat: no-repeat; */
+
+  /* Scroll that Stopped When U Make a scroll If You Want Background Fixed When U Are Scroll Use fixed */
+  background-attachment: scroll;
+
+  /* U Can Use It A Position Or A Pixels Or A Percent */
+  background-position: center top;
+  width: fit-content;
+  /* From Left - From Top */
+  background-position: 50px 70px;
+  background-position: 10% 34%;
+
+  /* Cover Make A To All Paragraphs */
+  background-size: cover;
+  /* Cover Make A To All Paragraphs But U See All Photo If U Zoom It*/
+  background-size: contain;
+  background-size: 40xp 40px;
+  background-size: 100% 100%;
+}
+
+.div1 {
+  color: #FF00FF;
+  background-color: #1a8116;
+
+  /* Top Right Bottom Left */
+  /* You Can Use Percent */
+  padding: 10px 10px 10px 10px;
+
+  width: 70%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  border-color: blue;
+  border-width: 10px;
+  border-style: dashed;
+}
+
+div {
+  background-color: aquamarine;
+  font-size: 50px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 75px;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.first {
+  display: none;
+  visibility: hidden;
+
+  width: 50px;
+  min-width: 30px;
+  max-width: 90px;
+
+  height: 50px;
+  min-height: 30px;
+  max-height: 90px;
+}
+
+.lorem {
+  background-color: #f9f9f9;
+  height: 200px;
+
+  /* overflow: visible; */
+  /* overflow: hidden; */
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+div .name {
+  font-style: normal;
+  font-weight: bolder;
+  color: coral;
+  font-size: 30px;
+
+  text-align: center;
+
+  /* 
+    ltr => Left To Right, 
+    rtl => Right To Left 
+  */
+  direction: ltr;
+
+  /* U Can Use top OR bottom OR middle */
+  vertical-align: top;
+
+  text-decoration: dotted;
+  text-transform: capitalize;
+  letter-spacing: -2px;
+  /* text-indent: -9900px; */
+
+  word-spacing: 10px;
+
+  /* 1.6 => 160% */
+  line-height: 1.6;
+
+
+  white-space: nowrap;
+
+  /* Word Break => break-all, break-word */
+  word-break: break-all;
+
+  /* Make Some Dots For A Long Words */
+  text-overflow: ellipsis;
+
+  /* ! Don't Forget Inhertance.... */
+
+  /* ? https://fonts.google.com/specimen/Cairo+Play?query=cairo */
+  font-family: "Cairo Play", sans-serif;
+
+  /* TODO 
+    CSS Uints
+      - px
+      - em => time
+      - rem => Root Time
+      - percentage
+      - vm => View Port Width
+
+    Read
+      - vmin
+      - vh
+
+    1em = 16px This Is Wrong/
+
+    Default Font Size For Web Page Is 16px
+  */
+
+  /** You Should Choose Between 100px -> 900px */
+  font-weight: normal;
+  font-weight: bold;
+
+  /* ! You Should Learn About Cursor Video => 26. */
+
+  cursor: grab;
+
+  /* !? 27 */
+
+  opacity: 0.5;
+  /* For Back Drop */
+
+  position: static;
+  position: relative;
+  position: absolute;
+  position: fixed;
+  position: sticky;
+ 
+  /* ! z-index Doesn't Work With Out Position */
+  z-index: -1;
+
+  /* TODO Pseudo Classes You Should Practise it ^_^ */
+
+  /* TODO Before, After, Content */
+
+  /* 
+    ! Check The WebSite 
+    ? Can I Use
+  */
+
+  /* TODO Search About This Gap U Make Here */
+
+  /* filter: ;  blur ,.....*/
+
+  /* ! linear-gradient( Direction | Anglur, Color One, Color Two, Color Three, .....) */
+  background-image: linear-gradient();
+}
