@@ -1,0 +1,59 @@
+div {
+  /* width: 100vw; */
+  /* height: 197vh; */
+  background-color: red;
+  background-image: url("TOM.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: right top;
+  /* background-size: contain; */
+  /* background-size: cover; */
+}
+
+.lorem {
+  background-color: blue;
+  font-size: 20px;
+  color: red;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 16px;
+
+  /* overflow: visible; */
+  overflow: hidden;
+  /* overflow: scroll; */
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+
+  white-space: nowrap;
+  /* word-break: break-all; */
+
+  /* Make Some Dots For A Long Words */
+  text-overflow: ellipsis;
+
+  cursor: pointer;
+}
+
+.name {
+  background-color: green;
+  padding: 20px;
+  height: 120px;
+  font-size: 30px;
+
+  text-align: center;
+  /* direction: ltr; */
+
+  vertical-align: bottom;
+  /* text-decoration: dotted; */
+  text-transform: uppercase;
+
+  letter-spacing: -1px;
+  /* word-spacing: -2px; */
+
+  line-height: 1.6;
+
+  cursor: grab;
+  /* opacity: 0.5; */
+
+  
+}
