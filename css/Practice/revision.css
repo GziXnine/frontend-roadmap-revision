@@ -193,3 +193,68 @@ body {
     height: 150px;
     margin: 10px;
 }
+
+/* Grid */
+/* 
+    Grid
+        Parent
+            - display: grid | inline-grid
+            - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Repeat, Friactional Unit, Mixed]
+            - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Repeat, Friactional Unit, Mixed]
+            - grid-template: [Rows] / [Columns]
+            - gap: [Row Gap] [Column Gap]
+            - justify-content
+                - start
+                - end
+                - center
+                - stretch => Default Value
+            - align-content
+                - start
+                - end
+                - center
+                - stretch => Default Value
+            - grid-template-areas
+                - "header header header header"
+                - "nav content . side"
+                - "footer footer footer footer"
+        Child
+            - grid-area: [Area Name]
+            - grid-area: [Grid-Row-Start] / [Grid-Column-Start] / [Grid-Row-End] / [Grid-Column-End]
+            - grid-column: [Start Line] / [End Line]
+            - grid-row: [Start Line] / [End Line]
+            - minmax
+                - grid-template-columns: repeat( auto-fill | auto-fit , minmax(100px, 1fr) )
+                    - auto-fill => Fill The Row With As Many As Possible
+                    - auto-fit => Fit The Row With As Many As Possible   
+                    - ch => Width Of The "0" Character 
+*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    padding: 5px;
+}
+.parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
