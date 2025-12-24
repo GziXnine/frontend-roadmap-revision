@@ -1,11 +1,11 @@
 div {
   /* width: 100vw; */
   /* height: 197vh; */
-  background-color: red;
+  /* background-color: red;
   background-image: url("TOM.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: right top;
+  background-position: right top; */
   /* background-size: contain; */
   /* background-size: cover; */
 }
@@ -79,5 +79,117 @@ div {
 44 - 100%
 */
 
+/* Flex Box */
 
+/*
+    Flexible Box
+        For Parent
+            - display: flex => To Start Flexible Box
+            - display: inline-flex => To Start Flexible Box As Inline
+            - flex-direction: row => Default Value
+            - flex-wrap: nowrap => Default Value
+                - nowrap => Default Value
+                - wrap
+                - wrap-reverse !IMPORTANT
+            - flex-flow: [Flex-Direction] + [Flex-Wrap]
+            - Justify-Content: [Flex-Items Horizontal Alignment]
+                - flex-start => Default Value
+                - flex-end
+                - center
+                - space-between
+                - space-around
+                - space-evenly
+            - align-items: [Flex-Items Vertical Alignment]
+                - flex-start
+                - flex-end
+                - center
+                - baseline
+                - stretch => Default Value
+            - align-content: [Flex-Lines Vertical Alignment]
+                - flex-start
+                - flex-end
+                - center
+                - space-between
+                - space-around
+                - space-evenly
+                - stretch => Default Value
 
+        For Child
+            - flex-grow: [Number] => Default Value Is 0
+            - flex-shrink: [Number] => Default Value Is 1
+            - order: [Number] => Default Value Is 0
+            - flex-basis: [Length | auto] => Default Value Is auto
+            - flex: [flex-grow] [flex-shrink] [flex-basis]
+                - flex: 0 1 auto => Default Value
+            - align-self: [auto | flex-start | flex-end | center | baseline | stretch]
+                - auto => Default Value    
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    direction: ltr;
+}
+/* .flex {
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.flex div {
+    background-color: #f00;
+    color: white;
+    width: calc(94% / 5);
+    text-align: center;
+    padding: 20px;
+    min-width: 100px;
+} */
+.flex {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+}
+.flex div {
+    background-color: #f00;
+    color: white;
+    width: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 5px;
+    flex-grow: 1;
+}
+.float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+.float div {
+    background-color: #f00;
+    float: left;
+    color: white;
+    width: calc(94% / 3);
+    text-align: center;
+    padding: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/* Linear Gradient */
+.box {
+    background: linear-gradient(to bottom right, red, yellow, green, blue);
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
