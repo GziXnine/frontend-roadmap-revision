@@ -1,5 +1,5 @@
 div {
-  /* width: 100vw; */
+  width: 100vw;
   /* height: 197vh; */
   /* background-color: red;
   background-image: url("TOM.png");
@@ -337,4 +337,133 @@ body {
 /* 
     88 => https://www.youtube.com/watch?v=YKUkssSbVls&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=88
     Frontend Mentor & Elzero Web School & Codepen & CSS Battle. 
+*/
+
+/* 2D Transform */
+/* 
+    transform: 
+        - translate(X, Y) => Move Element From His Position
+        - translateX(Value)
+        - translateY(Value)
+        - rotate(Angle) => Rotate Element Around Himself
+        - scale(X, Y) => Scale Element Size
+        - scaleX(X)
+        - scaleY(Y)
+        - skew(X-Angle, Y-Angle) => Skew Element
+        - skewX(X-Angle)
+        - skewY(Y-Angle)
+        - matrix( a, b, c, d, e, f ) => Combine All Transform Functions In One Function
+            - a => scaleX
+            - b => skewY
+            - c => skewX
+            - d => scaleY
+            - e => translateX
+            - f => translateY
+        - transform-origin: [X-Position] [Y-Position] => Change The Point That The Transform Will Be Applied On It
+            - X-Position
+                - left
+                - center
+                - right
+                - Percentage
+                - Pixels
+            - Y-Position
+                - top
+                - center
+                - bottom
+                - Percentage
+                - Pixels
+*/
+
+/* 3D Transform */
+/* 
+    transform: 
+        - translate3d(X, Y, Z)
+        - translateZ(Z)
+        - rotate3d(X-Axis, Y-Axis, Z-Axis, Angle)
+        - rotateX(Angle)
+        - rotateY(Angle)
+        - perspective(Value) => Give A 3D Perspective To An Element
+            perspective: Value => Give A 3D Perspective To All Child Elements
+        - transform-style: 
+            - flat => Default Value
+            - preserve-3d
+        - backface-visibility:
+            - visible => Default Value
+            - hidden
+        - perspective-origin: [X-Position] [Y-Position]
+            - X-Position
+                - left
+                - center
+                - right
+                - Percentage
+                - Pixels
+            - Y-Position
+                - top
+                - center
+                - bottom
+                - Percentage
+                - Pixels
+*/
+
+/* 
+  Aminated Transformations
+      - transition: [Property] [Duration] [Timing Function] [Delay]
+          - Property: all | specific property
+          - Duration: time in seconds | milliseconds
+          - Timing Function:
+              - ease => Default Value
+              - linear
+              - ease-in
+              - ease-out
+              - ease-in-out
+              - cubic-bezier(n, n, n, n)
+          - Delay: time in seconds | milliseconds
+      - transition-property
+      - transition-duration
+      - transition-timing-function
+      - transition-delay
+*/
+
+/* Animations */
+
+  @keyframes Animation-Name {
+      0% {
+          /* Initial State */
+      }
+      50% {
+          /* Middle State */
+      }
+      100% {
+          /* Final State */
+      }
+  }
+
+ /*  
+    .element {
+      animation: [Animation-Name] [Duration] [Timing Function] [Delay] [Iteration Count] [Direction] [Fill Mode] [Play State];
+          - Animation-Name: name of the animation
+          - Duration: time in seconds | milliseconds
+          - Timing Function:
+              - ease => Default Value
+              - linear
+              - ease-in
+              - ease-out
+              - ease-in-out
+              - cubic-bezier(n, n, n, n)
+          - Delay: time in seconds | milliseconds
+          - Iteration Count: number | infinite
+          - Direction:
+              - normal => Default Value
+              - reverse
+              - alternate
+              - alternate-reverse
+          - Fill Mode:
+              - none => Default Value
+              - forwards
+              - backwards
+              - both
+          - Play State:
+              - running => Default Value
+              - paused 
+    }
 */
