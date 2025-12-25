@@ -258,3 +258,83 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+/* Selectors */
+/* 
+  CSS Selectors
+      - Element => [p, div, h2]
+      - Element OtherElement => div p
+      - .class-name
+      - #id-name
+      - .parent .child
+      - .class-one.class-two
+      - .class-name div, .class-name p
+      - Element.class-name => p.class-name
+      - .parent > .child => Direct Child !IMPORTANT
+      - Element + Other Element => [div + p]
+      - Element ~ Other Elements => [p ~ div]
+      - [Attribute]
+      - Element[Attribute]
+      - [Attribute=Value]
+      - Element[Attribute=Value] => input[type="submit"]
+      - [Attribute~=Value] => Contains A Word
+      - [Attribute*=Value] => Contains A Atring
+      - [Attribute^=Value] => Start With A String
+      - :first-child
+      - :last-child
+      - :first-of-type
+      - :last-of-type
+      - :only-child
+      - :not(Selectors)
+      - :nth-child(n)
+      - :nth-last-child(n)
+      - :nth-of-type(n)
+      - :nth-last-of-type(n)
+          - n => Exact Number => (1, 2, 3, 4, ...)
+          - n => odd | even
+          - n => An + B => (2n + 1) , (3n + 2)
+          - n => -n + 9 => ( -1n + 9 ) , ( -2n + 10 )
+              - nthmaster.com
+      - :root
+      - :checked
+      - :empty
+      - :disabled
+      - :required
+      - :focus
+      - ::selection
+      - ::placeholder
+*/
+
+/* Media Query */
+/* 
+  css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/
+
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/*
+    87 - 70% => https://www.youtube.com/watch?v=iueBHixQyX0&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=87
+    CSS Global Values
+        - inherit
+        - initial
+        - unset
+        --- If Inherit => inherit
+        --- If Not => initial
+        - revert CSS Level [4]
+        - all
+*/
+body {
+  color: inherit;
+  font-size: initial;
+  margin: unset;
+  border: revert;
+}
+
+/* 
+    88 => https://www.youtube.com/watch?v=YKUkssSbVls&list=PLDoPjvoNmBAzjsz06gkzlSrlev53MGIKe&index=88
+    Frontend Mentor & Elzero Web School & Codepen & CSS Battle. 
+*/
