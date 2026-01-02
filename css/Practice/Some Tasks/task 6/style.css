@@ -1,0 +1,56 @@
+.task1 {
+  div {
+    background-color: #eeeeee;
+    width: 300px;
+    height: 60px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 60px;
+    margin: 10px auto;
+  }
+
+  div:empty {
+    background-color: red;
+  }
+}
+
+.task2 {
+  margin-top: 130px;
+
+  p {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    text-align: left;
+    line-height: 1.6;
+    padding: 15px;
+    margin: 10px auto;
+    width: 500px;
+    border-left: 5px solid blue;
+    position: relative;
+
+    &::before {
+      content: attr(data-person);
+      display: block;
+      width: 60px;
+      background-color: #eeeeee;
+      position: absolute;
+      top: 10px;
+      left: -110px;
+      padding: 5px 10px;
+    }
+
+    &::after {
+      content: "";
+      color: white;
+      display: block;
+      width: 0px;
+      height: 0px;
+      border: 10px solid;
+      border-color: transparent blue transparent transparent;
+      position: absolute;
+      top: 21px;
+      left: -24px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.task1 {
+  .parent {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #eee;
+    padding: 10px;
+    margin: 20px auto;
+    width: 630px;
+    height: 300px;
+
+    div {
+      width: calc((100% - 40px) / 3);
+      background-color: rgb(248, 107, 55);
+      text-align: center;
+      padding: 10px;
+      color: white;
+      font-size: 24px;
+    }
+  }
+}
+
+.task2 {
+  .parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    background-color: #eee;
+    padding: 10px;
+    margin: 20px auto;
+    width: 630px;
+    height: 300px;
+  }
+
+  div {
+    width: calc((100% - 40px) / 3);
+    background-color: rgb(248, 107, 55);
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .one {
+    order: 6;
+    align-self: self-end;
+  }
+
+  .two {
+    order: 5;
+  }
+
+  .three {
+    order: 2;
+    align-self: self-start;
+  }
+
+  .four {
+    order: 3;
+  }
+
+  .five {
+    order: 4;
+  }
+
+  .six {
+    order: 1;
+  }
+}
+
+.task3 {
+  .parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-flow: column wrap;
+    gap: 10px;
+    background-color: #eee;
+    padding: 10px;
+    margin: 20px auto;
+    width: 630px;
+    height: 300px;
+
+    div {
+      display: flex;
+      height: calc((100% - 60px) / 3);
+      background-color: rgb(54, 155, 155);
+      justify-content: center;
+      align-items: center;
+      width: 33px;
+      color: white;
+    }
+
+    .two {
+      width: 50%;
+      align-self: flex-start;
+    }
+  }
+}
+
+.task4 {
+  .parent {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #eee;
+    padding: 10px;
+    margin: 20px auto;
+    width: 630px;
+    height: 400px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(54, 155, 155);
+      align-items: center;
+      width: calc((100% - 100px) / 4);
+      height: 50%;
+      color: white;
+    }
+
+    .one {
+      order: 2;
+      align-self: flex-start;
+    }
+
+    .two {
+      order: 3;
+      align-self: flex-end;
+    }
+
+    .three {
+      order: 4;
+      align-self: flex-start;
+    }
+
+    .four {
+      order: 1;
+      align-self: flex-end;
+    }
+  }
+}

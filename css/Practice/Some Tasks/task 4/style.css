@@ -1,0 +1,39 @@
+.parent {
+  background-color: #eeeeee;
+  width: 800px;
+  margin: 40px auto;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.row1 p,
+.row2 p,
+.row3 p,
+.row4 p {
+  background-color: #ddd;
+  margin: 15px 0 0 15px;
+  padding: 18px 0;
+  float: left;
+  text-align: center;
+}
+
+.row1 p {
+  width: calc((100% - 30px) / 1)
+}
+
+.row2 p {
+  width: calc((100% - 60px) / 3)
+}
+
+.row3 p {
+  width: calc((100% - 45px) / 2)
+}
+
+.row4 p {
+  width: calc((100% - 75px) / 4);
+  margin-bottom: 15px;
+}
+
+.clear {
+  clear: both;
+}

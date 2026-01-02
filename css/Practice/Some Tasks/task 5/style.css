@@ -1,0 +1,124 @@
+.task1 {
+  div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: 20px;
+  }
+
+  .green {
+    background-color: green;
+    z-index: 3;
+    top: 30px;
+    left: 30px;
+  }
+
+  .red {
+    background-color: red;
+    z-index: 4;
+    top: 50px;
+    left: 50px;
+  }
+
+  .blue {
+    background-color: blue;
+    z-index: 2;
+  }
+
+  .black {
+    background-color: black;
+    z-index: 1;
+    top: 30px;
+  }
+}
+
+.task2 {
+  div {
+    width: 400px;
+    margin: 40px auto;
+    background-color: #eeeeee;
+    padding: 20px;
+    border: 3px solid;
+    border-color: rgb(255, 102, 0) rgb(63, 63, 212);
+    position: relative;
+    line-height: 1.8;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  span {
+    width: 32px;
+    height: 26px;
+    position: absolute;
+    background-color: rgb(63, 63, 212);
+    color: white;
+    text-align: center;
+    line-height: 26px;
+  }
+
+  .top-left {
+    position: absolute;
+    top: -13px;
+    left: -16px;
+    border-right: 2px solid rgb(255, 102, 0);
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: -13px;
+    left: -16px;
+    border-right: 2px solid rgb(255, 102, 0);
+  }
+
+  .top-right {
+    position: absolute;
+    top: -13px;
+    right: -16px;
+    border-left: 2px solid rgb(255, 102, 0);
+  }
+
+  .bottom-right {
+    position: absolute;
+    bottom: -13px;
+    right: -16px;
+    border-left: 2px solid rgb(255, 102, 0);
+  }
+}
+
+.task3 {
+  .main {
+    width: 400px;
+    margin: 40px auto;
+    font-family: sans-serif;
+
+    .lang1,
+    .lang2,
+    .lang3 {
+      background-color: #eeeeee;
+      list-style: none;
+      padding: 10px;
+      margin: 20px;
+
+      ol li {
+        background-color: white;
+        margin: 10px 0 0;
+        padding: 5px;
+      }
+
+      ul {
+        margin-left: -40px;
+
+        li {
+          background-color: white;
+          margin: 10px 0 0;
+          padding: 5px 10px;
+          list-style: circle inside;
+        }
+      }
+    }
+
+    .lang2 li {
+      list-style-type: upper-roman;
+    }
+  }
+}

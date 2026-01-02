@@ -1,0 +1,44 @@
+.parent {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #eee;
+  width: 420px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 20px;
+  height: 150px;
+  transition: translate 0.5s ease-in-out;
+
+  .child {
+    background-color: #ddd;
+    margin-top: 20px;
+    padding: 20px;
+    transition: translate 0.5s 0.5s ease-in-out;
+  }
+
+  &:hover {
+    translate: 0 -20px;
+
+    .child {
+      translate: 0 20px;
+    }
+  }
+}
+
+
+.task2 {
+  div {
+    width: 400px;
+    margin: 20px auto;
+    background-color: #eee !important;
+    border: none !important;
+    color: black !important;
+    font-size: 0px !important;
+    text-align: center;
+
+    &::before {
+      content: "Elzero";
+      font: bold 20px Arial;
+    }
+  }
+}

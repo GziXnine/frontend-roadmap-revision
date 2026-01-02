@@ -1,0 +1,42 @@
+div {
+  width: 600px;
+  height: 70px;
+  background-color: #eee;
+  margin: 30px auto;
+  line-height: 70px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 10px;
+  border: 8px solid;
+  border-color: transparent #673ab7 transparent #f44336;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 16px);
+    height: 8px;
+    background: linear-gradient(to right,
+        #f44336 0% 20%,
+        #2196f3 20% 40%,
+        #4caf50 40% 60%,
+        #e91e63 60% 80%,
+        #673ab7 80% 100%);
+  }
+
+  &::before {
+    top: -8px;
+    left: -8px;
+  }
+
+  &::after {
+    bottom: -8px;
+    left: -8px;
+  }
+
+  &::first-letter {
+    color: red;
+  }
+}

@@ -1,0 +1,56 @@
+.parent {
+  font-family: sans-serif;
+  text-align: center;
+
+  .child {
+    display: inline-block;
+    width: 250px;
+    margin: 10px 20px;
+    background-color: #eee;
+    padding: 24px 16px 10px;
+    position: relative;
+
+    .header {
+      background-color: blue;
+      font-size: 24px;
+      padding: 10px 0;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .main {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #ddd;
+      line-height: 200px;
+      font-size: 32px;
+      margin: 20px auto 10px;
+    }
+  }
+
+  .child1::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
+    top: 0;
+    right: -22px;
+  }
+
+  .child2::before {
+    content: "Or";
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: blue;
+    color: white;
+    top: calc(50% - 15px);
+    left: calc(-22px - 15px);
+  }
+}
