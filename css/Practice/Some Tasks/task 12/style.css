@@ -1,0 +1,35 @@
+.task1 {
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 110, 255);
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+    margin: 20px auto;
+
+    &::before {
+      content: " ";
+      z-index: -1;
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      background-color: rgb(0, 110, 255);
+      transform: scale(1.02) rotate(-5deg);
+    }
+
+    &::after {
+      content: " ";
+      z-index: -2;
+      position: absolute;
+      width: 300px;
+      height: 200px;
+      background-color: rgb(255, 0, 170);
+      transform: scale(1.02) rotate(5deg);
+    }
+  }
+}
