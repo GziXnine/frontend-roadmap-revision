@@ -278,7 +278,7 @@ body {
       - [Attribute=Value]
       - Element[Attribute=Value] => input[type="submit"]
       - [Attribute~=Value] => Contains A Word
-      - [Attribute*=Value] => Contains A Atring
+      - [Attribute*=Value] => Contains A String
       - [Attribute^=Value] => Start With A String
       - :first-child
       - :last-child
