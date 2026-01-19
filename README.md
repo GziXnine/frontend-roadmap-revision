@@ -22,43 +22,7 @@
 
 ---
 
-## 🌟 Hero Section
-
-<table>
-  <tr>
-    <td>
-      <img src="https://img.icons8.com/color/96/000000/computer--v2.png" width="50" align="left" />
-      <h2>What is this?</h2>
-      <p>
-        A curated, high-level roadmap for frontend engineers, emphasizing <strong>fundamentals, frameworks, best practices, and interview excellence</strong>.
-        <br/><br/>
-        🧭 <b>Structured paths</b> for every major technology.<br/>
-        💡 <b>Tricks, notes, and interview essentials</b> under each topic.<br/>
-        📈 <b>Progress tracker</b> to monitor your journey as you master the frontend landscape.<br/>
-      </p>
-    </td>
-  </tr>
-</table>
-
----
-
-## 🗺️ Roadmap Table
-
-| Area             | Folder                        | Status    | Key Topics                 | Interview Focus 🌟 |
-|------------------|------------------------------|-----------|----------------------------|-------------------|
-| HTML             | [`/html/`](html/)            | 🔄 WIP     | Semantics, Accessibility   | Yes               |
-| CSS              | [`/css/`](css/)              | 🔄 WIP     | Selectors, Flex, Grid      | Yes               |
-| SCSS             | [`/scss/`](scss/)            | 🔄 WIP     | Nesting, Mixins, Extends   |                   |
-| Bootstrap        | [`/bootstrap/`](bootstrap/)  | 🔄 WIP     | Grid, Components           |                   |
-| Tailwind         | [`/tailwind/`](tailwind/)    | 🔄 WIP     | Utility-First CSS          |                   |
-| JavaScript       | [`/javascript/`](javascript/)| 🔄 WIP     | ES6+, Async, DOM           | Yes               |
-| TypeScript       | [`/typescript/`](typescript/)| 🔄 WIP     | Types, Generics, Utility   | Yes               |
-| React            | [`/react/`](react/)          | 🔄 WIP     | Hooks, State, Patterns     | Yes               |
-| Next.js          | [`/nextjs/`](nextjs/)        | 🔄 WIP     | SSR, API, Routing          | Yes               |
-
----
-
-## 🎯 Interview Focus
+##  Interview Focus
 
 - Each stack section contains a dedicated <code>interview-questions.md</code> for targeted prep.
 - Stay ahead with <b>real-world questions, scenario-based problem-solving, and code snippets</b>.
@@ -66,26 +30,23 @@
 
 ---
 
-## 📊 Progress Tracker
+##  Progress Tracker
 
 | Area             | Fundamentals 🟩 | Interview 🟦 | Tricks/Notes 🟨 | Progress |
 |------------------|:--------------:|:------------:|:--------------:|:--------:|
-| HTML             | ✅             | ✅           | ⬜️             | 66%       |
-| CSS              | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| SCSS             | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| Bootstrap        | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| Tailwind         | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| JavaScript       | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| TypeScript       | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| React            | ⬜️             | ⬜️           | ⬜️             | 0%       |
-| Next.js          | ⬜️             | ⬜️           | ⬜️             | 0%       |
+| HTML             | ✓              | ✓            |  ✓             | 100%       |
+| CSS              | ✓              | ✓            |  ✓             | 100%       |
+| SCSS             |                |              |                | 0%       |
+| Bootstrap        | ✓              | ✓            |                | 66%       |
+| JavaScript       | ✓              |              |                | 33%       |
+| TypeScript       |                |              |                | 0%       |
 
 ---
 
-## 📚 Getting Started
+##  Getting Started
 
 1. Browse the folder structure for each technology.
-2. Work through the `basics.md`, then explore `interview-questions.md` and `tricks-and-notes.md` files.
+2. Work through the `basics`, then explore `interview-questions.md` files.
 3. Track your progress using the tables above.
 4. PRs welcome for additional resources, questions, and best practices!
 
