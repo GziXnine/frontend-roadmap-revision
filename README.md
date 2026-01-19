@@ -32,7 +32,7 @@
 
 ##  Progress Tracker
 
-| Area             | Fundamentals 🟩 | Interview 🟦 | Tricks/Notes 🟨 | Progress |
+| Area             | Fundamentals   | Interview   | Tricks/Notes   | Progress |
 |------------------|:--------------:|:------------:|:--------------:|:--------:|
 | HTML             | ✓              | ✓            |  ✓             | 100%       |
 | CSS              | ✓              | ✓            |  ✓             | 100%       |
