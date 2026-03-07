@@ -70,3 +70,42 @@ console.log(-"Osama"); // NaN
 console.log(-null); // -0
 console.log(Number(null)); // 0
 console.log(Number("15.5")); // 15.5
+
+// - Lexical Scope
+// - Strict Mode
+
+let chosen = 2;
+
+let myFriends = [
+  { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
+  { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
+  { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
+];
+
+let { title: t, age: a, available: av, skills: [, s2] } = myFriends[chosen - 1];
+
+console.log(`${t}`);
+console.log(`${a}`);
+console.log(`${av ? "Available" : "Not Available"}`);
+console.log(`${s2}`);
+
+// WeakSet Use Cases
+/*
+  1. Store Objects Only
+  2. No Size Property
+  3. No Clear Method
+  4. No Keys, Values, Entries Methods
+  5. No ForEach Method
+  6. Garbage Collector Can Remove Items If They Become Inaccessible
+  7. Use Case: Store Objects And Removes Them Once They Become Inaccessible
+*/
+
+
+// - performance.now()
+// - performance.mark()
+
+//  Asynchronous vs Synchronous Programming
+// - JavaScript Is A Single-Threaded
+// - Multi Threaded Languages
+
+// XMLHttpRequest, Promise, Fetch => Async & Await With Try, Catch, Finally
