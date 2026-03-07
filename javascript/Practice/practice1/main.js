@@ -501,7 +501,7 @@ let member = {
   name: "Elzero",
   age: 38,
   country: "Egypt",
-  fullDetails: function() {
+  fullDetails: function () {
     return `My Name Is ${this.name}, My Age Is ${this.age}, I Live in ${this.country}`;
   }
 };
@@ -558,7 +558,7 @@ let twoNums = {
 };
 
 // Create Your Object Here in One Line
-let finalObject = Object.assign({z}, threeNums, twoNums);
+let finalObject = Object.assign({ z }, threeNums, twoNums);
 
 console.log(finalObject);
 
