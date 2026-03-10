@@ -614,3 +614,9 @@ for (let i = 0; i < objectLength; i++) {
   }
   console.log("#".repeat(20));
 }
+
+// Search[For Advanced Knowledge]
+// - pushState() + replaceState()
+
+// Search
+// - Window.Open Window Features
