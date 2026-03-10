@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .assign {
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .assign input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ddd;
+    }
+
+    .assign input:focus {
+      outline: none;
+      border-color: #ccc;
+    }
+
+    .assign [title="Current"] {
+      padding: 20px;
+      margin: 10px auto;
+      width: 610px;
+      background-color: #f1f0f0;
+    }
+
+    .assign .classes-list {
+      padding: 20px;
+      margin: 10px auto;
+      width: 610px;
+      background-color: #f1f0f0;
+    }
+
+    .assign .classes-list h5 {
+      margin: 0 0 10px;
+      text-align: left;
+    }
+
+    .assign .classes-list div span {
+      background-color: #ff5722;
+      padding: 6px 10px 8px;
+      margin-right: 5px;
+      border-radius: 6px;
+      color: white;
+      display: inline-flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="assign">
+    <input type="text" class="classes-to-add" placeholder="Add Classes" />
+    <input type="text" class="classes-to-remove" placeholder="Remove Classes" />
+    <div class="element current" title="Current">Current Element</div>
+    <div class="classes-list">
+      <h5>Current Element Class Lists</h5>
+      <div class="class-items"></div>
+    </div>
+  </div>
+  <script>
+    const { input: [classesToAdd, classesToRemove], element, classItems } = {
+      input: document.querySelectorAll(".assign input"),
+      element: document.querySelector(".assign .element"),
+      classItems: document.querySelector(".assign .class-items")
+    };
+
+    let handleClasses = (e, type) => {
+      if (e.target.value.trim() === "") {
+        e.target.focus();
+        return;
+      }
+
+      const classes = e.target.value.toLowerCase().trim().split(" ");
+      e.target.value = "";
+
+      classes.forEach((cls) => {
+        if (cls) {
+          element.classList[type](cls); // Dynamic Method Access
+        }
+      });
+
+      addClasses();
+    }
+
+    let addClasses = () => {
+      classItems.innerHTML = "";
+
+      let classes = element.classList.value
+        .split(" ")
+        .filter((v) => v !== "element" && v !== "current")
+        .sort();
+
+      if (classes.length === 0) {
+        classItems.textContent = "No Classes To Show";
+        return;
+      }
+
+      classes.forEach((cls) => {
+        let span = document.createElement("span");
+
+        span.textContent = cls;
+        classItems.appendChild(span);
+      });
+    };
+
+    classesToAdd.addEventListener("blur", (e) => handleClasses(e, "add"));
+    classesToRemove.addEventListener("blur", (e) => handleClasses(e, "remove"));
+
+    addClasses();
+  </script>
+</body>
+
+</html>
