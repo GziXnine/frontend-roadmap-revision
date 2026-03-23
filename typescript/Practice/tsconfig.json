@@ -23,6 +23,7 @@
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "preserveConstEnums": true,
 
     // Style Options
     "noImplicitReturns": true,
@@ -33,6 +34,7 @@
     // "noFallthroughCasesInSwitch": true,
     // "noPropertyAccessFromIndexSignature": true,
     "removeComments": true,
+    "allowUnreachableCode": false,
 
     // Recommended Options
     "strict": true,
