@@ -161,3 +161,5 @@ console.log(user);
 
 // ? => Optional Property
 // Readonly => Cannot Reassign The Value Of The Property After Initialization
+
+// Class Access Modifiers And Parameters Properties
