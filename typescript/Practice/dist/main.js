@@ -82,6 +82,35 @@ let user = {
     name: "Alice",
     age: 25,
     isAdmin: true,
+    sayWelcome() {
+        console.log(`Welcome, ${this.name}!`);
+    },
+    sayHello: () => console.log("Hello, I am Alice!"),
+    getDouble(num) {
+        return num * 2;
+    },
 };
 console.log(user);
+class UserSettings {
+    name;
+    theme;
+    fontSize;
+    constructor(name, theme, fontSize = 14) {
+        this.name = name;
+        this.theme = theme;
+        this.fontSize = fontSize;
+    }
+    save() {
+        console.log(`Settings saved with theme: ${this.theme} and font size: ${this.fontSize}`);
+    }
+    updateTheme(newTheme) {
+        this.theme = newTheme;
+        console.log(`Theme updated to: ${this.theme}`);
+    }
+}
+const userSettings = new UserSettings("Alice", "dark");
+console.log(userSettings);
+userSettings.save();
+userSettings.updateTheme("light");
+userSettings.save();
 //# sourceMappingURL=main.js.map

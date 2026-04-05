@@ -146,15 +146,30 @@ if (lvl === "Medium") {
 
 // Type Annotations With Objects
 interface User {
+  id?: number; // Optional Property
   name: string;
   age: number;
   isAdmin: boolean;
+  sayWelcome(): void; // Method
+  sayHello: () => void; // Arrow Function
+}
+
+// Interface Reopening
+interface User {
+  getDouble: (num: number) => number;
 }
 
 let user: User = {
   name: "Alice",
   age: 25,
   isAdmin: true,
+  sayWelcome() {
+    console.log(`Welcome, ${this.name}!`);
+  },
+  sayHello: () => console.log("Hello, I am Alice!"),
+  getDouble(num: number) {
+    return num * 2;
+  },
 };
 
 console.log(user);
@@ -163,3 +178,39 @@ console.log(user);
 // Readonly => Cannot Reassign The Value Of The Property After Initialization
 
 // Class Access Modifiers And Parameters Properties
+interface Settings {
+  theme: string;
+  fontSize?: number;
+  save: () => void;
+}
+
+class UserSettings implements Settings {
+  constructor(
+    public name: string,
+    public theme: string,
+    public fontSize: number = 14, // Default Value
+  ) {}
+
+  save() {
+    console.log(
+      `Settings saved with theme: ${this.theme} and font size: ${this.fontSize}`,
+    );
+  }
+
+  updateTheme(newTheme: string) {
+    this.theme = newTheme;
+    console.log(`Theme updated to: ${this.theme}`);
+  }
+}
+
+const userSettings = new UserSettings("Alice", "dark");
+console.log(userSettings);
+userSettings.save();
+userSettings.updateTheme("light");
+userSettings.save();
+
+// -- JSDoc --
+// JSDoc is a documentation generator for JavaScript. It allows you to add type annotations and documentation comments to your JavaScript code, which can be used by tools like TypeScript to provide type checking and IntelliSense support.
+
+// -- tsconfig.json --
+// The tsconfig.json file is a configuration file for TypeScript projects. It specifies the compiler options and settings for the TypeScript compiler. In this project, we have set the "noImplicitOverride" option to true, which requires that any method that overrides a method in a base class must be explicitly marked with the "override" keyword. This helps to catch potential errors when overriding methods and ensures that the developer is aware of the override.
